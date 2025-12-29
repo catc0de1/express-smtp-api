@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --require tsconfig-paths/register src/server.ts",
-    "build": "webpack --mode=production",
+    "build": "npx webpack --mode=production",
     "start": "node dist/app.js",
     "lint": "eslint . --ext .ts,.js",
     "lint:fix": "eslint . --ext .ts,.js --fix"

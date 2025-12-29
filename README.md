@@ -17,16 +17,23 @@ This API accepts `JSON` as input and sends an email to a predefined Gmail accoun
 
 ## How to Use
 
+**Swagger** endpoint: `https://smtp-ziymailer-api.onrender.com/docs`
+
 Health check:
 ```HTTP
-GET https://stmp-api.onrender.com/api/health
+GET https://smtp-ziymailer-api.onrender.com/api/health
 ```
 
-Health check are used to check the API is online. It will response `200 OK`.
+SMTP check:
+```HTTP
+GET https://smtp-ziymailer-api.onrender.com/api/health/smtp
+```
+
+Health check and SMTP check are used to check the API is online. It will response `200 OK`.
 
 Make a request to:
 ```HTTP
-POST https://stmp-api.onrender.com/api/email/gmail 
+POST https://smtp-ziymailer-api.onrender.com/api/email/gmail 
 ```
 
 with a JSON body:
