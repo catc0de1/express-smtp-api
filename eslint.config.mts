@@ -13,5 +13,8 @@ export default defineConfig([
       'comma-dangle': ['error', 'always-multiline'],
     },
   },
+  {
+    ignores: ['**/dist/**', '**/node_modules/**'],
+  },
   ...tseslint.configs.recommended,
 ]);

@@ -9,7 +9,6 @@ This API accepts `JSON` as input and sends an email to a predefined Gmail accoun
 
 - Built with [Express](https://expressjs.com/) and [TypeScript](https://www.typescriptlang.org/)
 - Email template built with [Handlebars](https://handlebarsjs.com/)
-- Handles CORS and JSON requests
 - Sends email using Nodemailer
 - Using rate limiter (5 per use within 1 minute)
 - Validator JSON input
@@ -20,14 +19,14 @@ This API accepts `JSON` as input and sends an email to a predefined Gmail accoun
 
 Health check:
 ```HTTP
-GET https://stmp-api.onrender.com/health
+GET https://stmp-api.onrender.com/api/health
 ```
 
 Health check are used to check the API is online. It will response `200 OK`.
 
 Make a request to:
 ```HTTP
-POST https://stmp-api.onrender.com/api/send-email/public 
+POST https://stmp-api.onrender.com/api/email/gmail 
 ```
 
 with a JSON body:

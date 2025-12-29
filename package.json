@@ -1,11 +1,9 @@
 {
-  "name": "send-email",
+  "name": "smtp-api",
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
   "dependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/nodemailer": "^6.4.17",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
@@ -15,19 +13,22 @@
     "zod": "^3.25.67"
   },
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "ts-node-dev --require tsconfig-paths/register src/server.ts",
     "build": "tsc && cp -r src/templates dist/templates",
-    "start": "node dist/index.js",
+    "start": "node dist/server.js",
     "lint": "eslint . --ext .ts,.js",
     "lint:fix": "eslint . --ext .ts,.js --fix"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.3",
+    "@types/nodemailer": "^7.0.4",
     "eslint": "^9.35.0",
     "globals": "^16.3.0",
     "jiti": "^2.5.1",
     "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.42.0"
   }
