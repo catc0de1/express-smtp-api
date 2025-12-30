@@ -15,25 +15,31 @@ This API accepts `JSON` as input and sends an email to a predefined Gmail accoun
 
 ---
 
+## Preview
+
+![preview1](/images/preview1.png)
+
+---
+
 ## How to Use
 
-**Swagger** endpoint: `https://smtp-ziymailer-api.onrender.com/docs`
+**Swagger** API documentation endpoint: [https://smtp-ziymailer.onrender.com/docs](https://smtp-ziymailer.onrender.com/docs)
 
 Health check:
 ```HTTP
-GET https://smtp-ziymailer-api.onrender.com/api/health
+GET https://smtp-ziymailer.onrender.com/api/health
 ```
 
 SMTP check:
 ```HTTP
-GET https://smtp-ziymailer-api.onrender.com/api/health/smtp
+GET https://smtp-ziymailer.onrender.com/api/health/smtp
 ```
 
 Health check and SMTP check are used to check the API is online. It will response `200 OK`.
 
 Make a request to:
 ```HTTP
-POST https://smtp-ziymailer-api.onrender.com/api/email/gmail 
+POST https://smtp-ziymailer.onrender.com/api/email/gmail 
 ```
 
 with a JSON body:
@@ -97,4 +103,4 @@ Author : Iyan Zuli Armanda
 ## License
 
 
-Ziymail is [MIT licensed](https://github.com/CatC0de1/EmailApi?tab=MIT-1-ov-file)
+Ziymail is [MIT licensed](https://github.com/CatC0de1/express-smtp-api?tab=MIT-1-ov-file)
