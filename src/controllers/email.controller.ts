@@ -20,7 +20,6 @@ export const sendGmail = async (req: Request, res: Response) => {
 
   try {
     const htmlContent = renderTemplate('emailTemplate', {
-      public: true,
       user_name_sender,
       user_email_sender,
       message,
@@ -29,7 +28,7 @@ export const sendGmail = async (req: Request, res: Response) => {
     });
 
     await transporter.sendMail({
-      from: `"${user_name_sender}" <no-reply@${user_email_sender}>`,
+      from: `"${user_name_sender}" <${process.env.MAIL_USERNAME}>`,
       to: user_email_receiver,
       subject: `Hello ${user_name_receiver}, you have message from ${user_name_sender}`,
       html: htmlContent,
